@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!-- source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html -->
 <!-- STUDENTS: Modify this file to provided the Google API key to get it working, 
                then modify the lat and lng and zoom to point to a place you know  -->
@@ -7,14 +8,17 @@
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style>
+      
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-        #map {
+      
+      #map {
           height: 100%;
         }
 
         /* Optional: Makes the sample page fill the window. */
-        html,
+      
+      html,
         body {
           height: 100%;
           margin: 0;
@@ -27,7 +31,11 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 21.170, lng: 72.818 },
-          zoom: 8,
+          zoom: 4,
+        marker = new google.maps.Marker({
+    position: { lat: 21.170, lng: 72.818 },
+    map: map,
+  });
         });
       }
     </script>
@@ -37,6 +45,7 @@
     
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <!-- *** STUDENTS: Replace YOUR_API_KEY text with provided key in class for property src in next line *** -->
+    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly" async>
     </script>
   </body>
