@@ -30,9 +30,11 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 21.170, lng: 72.818 },
-          zoom: 12,
+          center: { lat: 43.643, lng: -79.387 },
+          zoom: 15,
+          mapTypeId: "satellite"
         });
+        map.setTilt(45);  
       }
     </script>
   </head>
