@@ -37,7 +37,7 @@ h4 {
   text-justify: inter-word;
 }
 .bg-image {
-  background-image: url("story/UmlingLa.jpg");
+  background-image: url("UmlingLa.jpg");
   height: 95vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,11 +49,18 @@ h4 {
   background-image: url("Visuals/bgimage.jpg");
 
   /* Set a specific height */
-  min-height: 800px; 
+  min-height: 600px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.parallaxtext {
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    font-size: 36px;
+    text-align: justify;
+    padding: 20px;
 }
 html,  
 body {
@@ -61,19 +68,6 @@ body {
     margin: 0;
     padding: 0;
   }
-
-  
-    color: white;
-    
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    
-    z-index: 2;
-    width: 90%;
-    padding: 20px;
-    text-align: center;  
 
   </style>
   
@@ -86,17 +80,16 @@ body {
   
 
 <body>
+  
   <h1>My Journey to the HIghest road in the world</h1>
   <h2>The Mighty Umling La - 19,024 ft</h2>
+
+  <div class="parallaxtext">
   <h3> I started my Journey from my home town Surat and it culminated at the might Umling La. The intense 3000 km journey took me 8 days to reach there.</h3>
+  </div>
   <div id="map"></div>
 
-    <!-- 
-      The `defer` attribute causes the callback to execute after the full HTML
-      document has been parsed. For non-blocking uses, avoiding race conditions,
-      and consistent behavior across browsers, consider loading using Promises
-      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-      -->
+
   <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
       defer
